@@ -1,3 +1,4 @@
+// NavBar.jsx
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -17,12 +18,14 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+-     setIsScrolled(window.screenY > 10);
++     setIsScrolled(window.scrollY > 10); // bugfix: screenY -> scrollY
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <nav
       className={cn(
@@ -42,8 +45,7 @@ export const Navbar = () => {
         </a>
 
         {/* desktop nav */}
-        
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item, key) => (
             <a
               key={key}
@@ -53,19 +55,24 @@ export const Navbar = () => {
               {item.name}
             </a>
           ))}
+          {/* Inline (non-floating) toggle on desktop */}
           <ThemeToggle />
         </div>
 
-        {/* mobile nav */}
+        {/* right-side controls on mobile (toggle + burger) */}
+        <div className="md:hidden flex items-center space-x-2">
+          {/* Inline (non-floating) toggle on mobile */}
+          <ThemeToggle />
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="p-2 text-foreground z-50"
+            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
 
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
-          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
-        </button>
-
+        {/* mobile nav overlay */}
         <div
           className={cn(
             "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
