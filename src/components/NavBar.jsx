@@ -18,21 +18,32 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
--     setIsScrolled(window.screenY > 10);
-+     setIsScrolled(window.scrollY > 10); // bugfix: screenY -> scrollY
+      setIsScrolled(window.screenY > 10);
+      setIsScrolled(window.scrollY > 10); // bugfix: screenY -> scrollY
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      // lock scroll
+      document.body.style.overflow = "hidden";
+    } else {
+      // unlock
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
   return (
-    <nav
-      className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-      )}
-    >
+    <nav className={cn(
+      "fixed w-full z-40 transition-all duration-300",
+      isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+    )}>
       <div className="container flex items-center justify-between">
         <a
           className="text-xl font-bold text-primary flex items-center"
@@ -66,23 +77,34 @@ export const Navbar = () => {
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
             className="p-2 text-foreground z-50"
-            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+            aria-label="Open Menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <Menu size={24} />
           </button>
         </div>
 
         {/* mobile nav overlay */}
         <div
           className={cn(
-            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
+            "fixed inset-0 z-[60] h-[100dvh] bg-background/95 backdrop-blur-md",
             "transition-all duration-300 md:hidden",
-            isMenuOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+            isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           )}
+          onClick={() => setIsMenuOpen(false)} // click backdrop to close
         >
-          <div className="flex flex-col space-y-8 text-xl">
+          <div
+            className="relative w-full h-full flex flex-col items-center justify-center space-y-8 text-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button at top right */}
+            <button
+              className="absolute top-4 right-4 p-2 rounded-md"
+              aria-label="Close Menu"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <X size={24} />
+            </button>
+
             {navItems.map((item, key) => (
               <a
                 key={key}
