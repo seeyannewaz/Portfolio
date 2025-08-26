@@ -1,6 +1,6 @@
 import { ArrowRight, Github } from "lucide-react";
 import hydrawatchImg from "../assets/hydrawatch.webp";
-import listernshipsImg from "../assets/listernships.png";
+import listernshipsImg from "../assets/Listernships.png";
 import weatherwiseImg from "../assets/weatherwise.jpg";
 import experteventsImg from "../assets/Expert.webp";
 import satelliteImg from "../assets/satellite.png";
