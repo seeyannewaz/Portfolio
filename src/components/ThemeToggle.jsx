@@ -1,9 +1,9 @@
-// ThemeToggle.jsx
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 
-export const ThemeToggle = ({ variant = "fixed", className = "" }) => {
+
+export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -29,22 +29,13 @@ export const ThemeToggle = ({ variant = "fixed", className = "" }) => {
     }
   };
 
-  const base =
-    "rounded-full transition-colors duration-300 focus:outline-none";
-
-  const fixedClasses =
-    // hidden on mobile, fixed button on desktop (unchanged behavior)
-    "hidden md:flex fixed top-5 right-5 z-50 p-2";
-
-  const inlineClasses =
-    // visible on mobile, inline button (sits next to hamburger)
-    "md:hidden inline-flex p-2 z-50";
-
   return (
     <button
       onClick={toggleTheme}
-      className={cn(base, variant === "fixed" ? fixedClasses : inlineClasses, className)}
-      aria-label="Toggle theme"
+      className={cn(
+        "fixed top-5 right-16 z-50 p-2 rounded-full transition-colors duration-300",
+        "focus:outline-none"
+      )}
     >
       {isDarkMode ? (
         <Sun className="h-6 w-6 text-yellow-300" />
