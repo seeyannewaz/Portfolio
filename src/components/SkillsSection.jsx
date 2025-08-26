@@ -73,13 +73,17 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-3 sm:p-4 rounded-lg shadow-xs card-hover min-w-0 overflow-hidden"
             >
-              <h3 className="font-semibold text-lg">{skill.name}</h3>
+              <h3
+                className="font-medium text-xs sm:text-sm md:text-base leading-tight text-center break-words"
+              >
+                {skill.name}
+              </h3>
             </div>
           ))}
         </div>
