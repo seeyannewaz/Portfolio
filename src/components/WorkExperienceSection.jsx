@@ -15,7 +15,7 @@ const EXPERIENCES = [
   },
   {
     role: "Software Developer Intern",
-    company: "Paycom",
+    company: "Paycom, USA",
     period: "May 2025 – Aug 2025",
     tech: "ASP.NET Core, C#, React, TypeScript, Apache OpenNLP, PdfPig",
     points: [
@@ -24,6 +24,38 @@ const EXPERIENCES = [
       "Engineered and trained custom NLP models (NER) to extract structured data entities.",
       "Architected backend extraction to infer relationships and auto-classify data.",
       "Managed GitLab-based CI/CD and version control in a collaborative, constraint-driven environment.",
+    ],
+  },
+  {
+    role: "Backend Developer",
+    company: "Association for Computing Machinery, The University of Texas at Dallas Chapter",
+    period: "Feb 2024 – Apr 2024",
+    tech: "Dart, Flutter, Firebase, Cloud Firestore, OpenAI API, GPT-4 Turbo",
+    points: [
+      "Collaborated with a team of 5 to develop a full-stack android app connecting 50+ university organizations with 30,000+ students through organization-hosted events to foster community engagement.",
+      "Trained and integrated an AI chatbot using OpenAI's GPT-4 Turbo for personalized event recommendations with 90% accuracy.",
+      "Designed a dynamic calendar with Firestore and integrated date formatting for real-time event management, boosting functionality and achieving 93% user satisfaction.",
+      "Optimized Firestore database schema for 50% faster data retrieval than default SQL database, and seamless real-time synchronization, ensuring data integrity and efficient storage.",
+    ],
+  },
+  {
+    role: "Teaching Assistant, High Schoool Mathematics",
+    company: "The Study Town, Bangladesh",
+    period: "Jun 2020 – Jul 2022",
+    points: [
+      "Provided support to the Mathematics department in delivering effective instruction to 500+ students.",
+      "Worked closely with the classroom teacher, assisting in lesson planning, classroom management, and student engagement, to ensure a positive learning environment.",
+      "Offered guidance and feedback to 100+ students on their assignments, exams, and homework, helping them improve their performance and understanding of the subject matter.",
+    ],
+  },
+  {
+    role: "Coordinator",
+    company: "Nerd Community, Bangladesh",
+    period: "Aug 2020 – May 2022",
+    points: [
+      "Provided free academic tutoring through Nerd Community (largest Facebook platform in Bangladesh, 40K+ members).",
+      "Delivered clear explanations of complex concepts, helping 40K+ students improve grades and meet their academic goals.",
+      "Collaborated with a diverse student base, fostering an inclusive learning environment that encouraged engagement and knowledge sharing",
     ],
   },
 ];
