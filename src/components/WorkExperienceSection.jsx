@@ -27,6 +27,22 @@ const EXPERIENCES = [
     ],
   },
 ];
+const METRIC_SPLIT_RE =
+  /(\$?\d{1,3}(?:,\d{3})*(?:\.\d+)?(?:[KkMmBb])?\+?%?)/g;
+const METRIC_TEST_RE =
+  /\$?\d{1,3}(?:,\d{3})*(?:\.\d+)?(?:[KkMmBb])?\+?%?/;
+
+function highlightMetrics(text) {
+  return text.split(METRIC_SPLIT_RE).map((part, i) =>
+    METRIC_TEST_RE.test(part) ? (
+      <span key={i} className="font-bold text-foreground">
+        {part}
+      </span>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+}
 
 export const WorkExperienceSection = () => {
   return (
@@ -102,7 +118,7 @@ export const WorkExperienceSection = () => {
 
                       <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                         {exp.points.map((p, i) => (
-                          <li key={i}>{p}</li>
+                          <li key={i}>{highlightMetrics(p)}</li>
                         ))}
                       </ul>
                     </article>
