@@ -35,7 +35,7 @@ const METRIC_TEST_RE =
 function highlightMetrics(text) {
   return text.split(METRIC_SPLIT_RE).map((part, i) =>
     METRIC_TEST_RE.test(part) ? (
-      <span key={i} className="font-bold text-foreground">
+      <span key={i} className="font-extrabold text-primary">
         {part}
       </span>
     ) : (
