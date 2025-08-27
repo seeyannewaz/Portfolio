@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  // Frontend
   { name: "HTML", category: "frontend" },
   { name: "CSS", category: "frontend" },
   { name: "JavaScript", category: "frontend" },
@@ -27,6 +26,7 @@ const skills = [
   { name: "Flask", category: "backend" },
   { name: "Node.js", category: "backend" },
   { name: "SQLAlchemy", category: "backend" },
+  { name: "OpenAI API", category: "backend" },
 
   // Tools
   { name: "Visual Studio", category: "tools" },
@@ -77,7 +77,7 @@ export const SkillsSection = () => {
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-3 sm:p-4 rounded-lg shadow-xs card-hover min-w-0 overflow-hidden"
+              className="bg-card p-3 sm:p-4 rounded-lg shadow-xs card-hover min-w-0 overflow-hidden flex items-center justify-center"
             >
               <h3
                 className="font-medium text-xs sm:text-sm md:text-base leading-tight text-center break-words"
