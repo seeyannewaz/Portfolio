@@ -11,7 +11,8 @@ const COURSEWORK = [
   "Probability & Statistics in CS and SE",
   "Database Systems",
   "Computer Networks",
-  "Digital Logic and Computer Design"
+  "Digital Logic and Computer Design",
+  "Linear Algebra",
 ];
 
 export const EducationSection = () => {
@@ -51,7 +52,7 @@ export const EducationSection = () => {
           <p className="text-sm md:text-base mb-3">
             <span className="font-semibold">Honors:</span>{" "}
             <span className="text-foreground/90">
-              Dean’s List, Academic Excellence Scholarship
+              Dean’s List, Academic Excellence Scholarship, Texas Competitive Scholarship
             </span>
           </p>
 
@@ -62,7 +63,7 @@ export const EducationSection = () => {
               {COURSEWORK.map((c, i) => (
                 <span key={i}>
                   {c}
-                  {i < COURSEWORK.length - 1 ? " · " : ""}
+                  {i < COURSEWORK.length - 1 ? " • " : ""}
                 </span>
               ))}
             </span>
