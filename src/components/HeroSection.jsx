@@ -22,8 +22,8 @@ export const HeroSection = () => {
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             I’m a software developer passionate about problem-solving, innovation, and building impactful solutions through full-stack development, machine learning, 
-            artificial intelligence and data analysis. With experience tackling complex projects and a drive to keep learning, I’m eager for opportunities- whether internships, 
-            collaborations, or employment- that challenge me and help me grow as a software developer.
+            artificial intelligence and data analysis. I’m always eager for opportunities- whether internships, collaborations, or employment- that challenge me and help me 
+            grow as a software developer.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">

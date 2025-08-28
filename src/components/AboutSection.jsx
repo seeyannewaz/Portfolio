@@ -102,8 +102,8 @@ export const AboutSection = () => {
             </p>
 
             <p className="text-muted-foreground">
-              I'm a full-stack developer passionate about creating elegant solutions to complex problems. I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving software development landscape.
+              I'm a full-stack developer passionate about creating elegant solutions to complex problems. With experience tackling complex projects and a drive to keep learning, 
+              I'm constantly learning new technologies and techniques to stay at the forefront of the ever-evolving software development landscape.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
