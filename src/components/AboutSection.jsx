@@ -1,6 +1,5 @@
 import { Briefcase, Code, User } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import Resume from "../assets/Resume.pdf";
 import myImg from "../assets/myImg.jpg";
 
 export const AboutSection = () => {
@@ -110,7 +109,7 @@ export const AboutSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a href="#contact" className="cosmic-button">Get In Touch</a>
               <a
-                href={Resume}
+                href="/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-center"
