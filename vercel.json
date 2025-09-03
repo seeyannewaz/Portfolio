@@ -3,16 +3,16 @@
     { "source": "/index.html", "destination": "/", "permanent": true },
 
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "seeyannewaz.com" }],
-      "destination": "https://www.seeyannewaz.com/:1",
+      "destination": "https://www.seeyannewaz.com/:path*",
       "permanent": true
     },
 
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "YOUR-PROJECT.vercel.app" }],
-      "destination": "https://www.seeyannewaz.com/:1",
+      "destination": "https://www.seeyannewaz.com/:path*",
       "permanent": true
     }
   ]
