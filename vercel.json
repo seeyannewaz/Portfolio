@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "seeyannewaz.com" }],
+      "destination": "https://www.seeyannewaz.com/:1",
+      "permanent": true
+    },
+
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "YOUR-PROJECT.vercel.app" }],
+      "destination": "https://www.seeyannewaz.com/:1",
+      "permanent": true
+    }
+  ]
+}
