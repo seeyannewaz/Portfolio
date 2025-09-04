@@ -11,7 +11,7 @@ const projects = [
     id: 1,
     title: "HydraWatch",
     description:
-      "Built a Hydrate Prediction Web App at HackUTD for EOG Resources — a Flask + Next.js app with real-time dashboards, a 95%-accurate ML model, and scalable data handling for 100k+ IoT sensor points.",
+      "Built a hydrate prediction web app at HackUTD for EOG Resources — a Flask + Next.js app with real-time dashboards, a 95%-accurate ML model, and scalable data handling for 100k+ IoT sensor points.",
     image: hydrawatchImg,
     tags: [
       "Python",
