@@ -5,14 +5,14 @@
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "seeyannewaz.com" }],
-      "destination": "https://www.seeyannewaz.com/:path*",
+      "destination": "https://seeyannewaz.com/:path*",
       "permanent": true
     },
 
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "YOUR-PROJECT.vercel.app" }],
-      "destination": "https://www.seeyannewaz.com/:path*",
+      "destination": "https://seeyannewaz.com/:path*",
       "permanent": true
     }
   ]
