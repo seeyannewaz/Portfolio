@@ -13,6 +13,7 @@ const skills = [
   { name: "Tailwind CSS", category: "frontend" },
   { name: "Chakra UI", category: "frontend" },
   { name: "Framer Motion", category: "frontend" },
+  { name: "TypeScript", category: "frontend" },
 
   // Backend
   { name: "C", category: "backend" },
