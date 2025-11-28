@@ -5,11 +5,27 @@ import weatherwiseImg from "../assets/weatherwise.jpg";
 import experteventsImg from "../assets/Expert.webp";
 import satelliteImg from "../assets/satellite.png";
 import fastfoodImg from "../assets/fastfood.png";
-import resumecritiquerImg from "../assets/airesumecritiquer.png"
+import resumecritiquerImg from "../assets/airesumecritiquer.png";
+import inboxIntelImg from "../assets/InboxIntel.png"
 
 const projects = [
   {
     id: 1,
+    title: "InboxIntel",
+    description:
+      "An AI-powered email triage system that connects to Gmail, summarizes unread messages, classifies priority and category, extracts tasks, and generates reply drafts, all surfaced through a technophilic Streamlit dashboard with PostgreSQL-backed persistence.",
+    image: inboxIntelImg,
+    tags: [
+      "Python",
+      "Streamlit",
+      "OpenAI API",
+      "Gmail API",
+      "PostgreSQL"
+    ],
+    githubUrl: "https://github.com/seeyannewaz/InboxIntel.git",
+  },
+  {
+    id: 2,
     title: "AI Resume Critiquer",
     description:
       "Built an AI-powered resume critiquing web app that lets users upload PDF/TXT resumes and receive structured feedback tailored to specific job roles.",
@@ -24,7 +40,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/ai-resume-critiquer.git",
   },
   {
-    id: 2,
+    id: 3,
     title: "HydraWatch",
     description:
       "A Hydrate prediction web app at HackUTD for EOG Resources- a Flask + Next.js app with real-time dashboards, a 95%-accurate ML model, and scalable data handling for 100k+ IoT sensor points.",
@@ -41,7 +57,7 @@ const projects = [
     githubUrl: "https://github.com/Reevu01/Hydra-Watch",
   },
   {
-    id: 3,
+    id: 4,
     title: "Listernships",
     description:
       "Full-stack app to manage internship applications with CRUD features, real-time status updates, SQLite storage, and a responsive Chakra UI interface with dark mode.",
@@ -58,7 +74,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/Listernships",
   },
   {
-    id: 4,
+    id: 5,
     title: "WeatherWise",
     description:
       "Responsive app built with HTML, CSS, and JavaScript, integrating the OpenWeatherMap API for real-time forecasts with a light/dark mode toggle and smooth UI transitions.",
@@ -67,7 +83,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/WeatherWise",
   },
   {
-    id: 5,
+    id: 6,
     title: "ExpertEvents",
     description:
       "Full-stack app linking 50+ university student organizations with 30k+ students, featuring an AI chatbot (GPT-4 Turbo) for personalized event recommendations and a real-time Firestore calendar.",
@@ -76,7 +92,7 @@ const projects = [
     githubUrl: "https://github.com/acm-projects/ExpertEvents",
   },
   {
-    id: 6,
+    id: 7,
     title: "Satellite",
     description:
       "C++ program simulating telemetry data collection, storage, and transmission in an embedded satellite system, optimized with OOP, file I/O, and circular arrays for high efficiency and accuracy.",
@@ -85,7 +101,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/Satellite",
   },
   {
-    id: 7,
+    id: 8,
     title: "Fast-Food Chain Analytics",
     description:
       "C++ program for tracking transactions and inventory of a fast-food chain, featuring OOP design, file I/O with CSVs, business analytics, and robust input validation for efficient, accurate operations.",
