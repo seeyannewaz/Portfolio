@@ -30,6 +30,7 @@ const skills = [
   { name: "OpenAI API", category: "backend" },
 
   // Tools
+   { name: "PostgreSQL", category: "tools" },
   { name: "Visual Studio", category: "tools" },
   { name: "VS Code", category: "tools" },
   { name: "IntelliJ IDEA", category: "tools" },
