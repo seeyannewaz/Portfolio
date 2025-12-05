@@ -97,7 +97,7 @@ export const AboutSection = () => {
             <h3 className="text-2xl font-semibold">Aspiring Software Developer</h3>
 
             <p className="text-muted-foreground">
-              Having worked at <b><i>ACM UTD</i></b> as a backend developer and at <b><i>Paycom</i></b> as a software developer intern, I have developed a strong foundation
+              Having worked at <b><i>ACM UTD</i></b> as a backend software developer and at <b><i>Paycom</i></b> as a software developer intern, I have developed a strong foundation
               in both backend and frontend services, and gained hands-on experience in various programming languages and frameworks.
             </p>
 
