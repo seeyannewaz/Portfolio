@@ -28,7 +28,9 @@ const skills = [
   { name: "Node.js", category: "backend" },
   { name: "SQLAlchemy", category: "backend" },
   { name: "OpenAI API", category: "backend" },
-
+  { name: "Lisp", category: "backend" },
+  { name: "Prolog", category: "backend" },
+  
   // Tools
    { name: "PostgreSQL", category: "tools" },
   { name: "Visual Studio", category: "tools" },
@@ -40,6 +42,8 @@ const skills = [
   { name: "Firebase", category: "tools" },
   { name: "Linux", category: "tools" },
   { name: "Postman", category: "tools" },
+  { name: "Docker", category: "tools" },
+  { name: "Kubernetes", category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
