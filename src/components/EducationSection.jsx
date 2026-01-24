@@ -2,10 +2,10 @@
 import { GraduationCap } from "lucide-react";
 
 const COURSEWORK = [
-  "Object Oriented Programming in Java & C++",
   "Computer Architecture (MIPS)",
   "Discrete Mathematics",
   "Data Structures & Algorithms",
+  "Software Engineering",
   "Programming Languages & Paradigms",
   "Programming in a UNIX Environment",
   "Probability & Statistics in CS and SE",
@@ -45,14 +45,14 @@ export const EducationSection = () => {
           {/* Degree + GPA */}
           <p className="text-sm md:text-base text-foreground/90 mb-3">
             <span className="font-semibold">B.S. in Computer Science</span>{" "}
-            <span className="text-foreground/70">(GPA: 3.89)</span>
+            <span className="text-foreground/70">(GPA: 3.91)</span>
           </p>
 
           {/* Honors */}
           <p className="text-sm md:text-base mb-3">
             <span className="font-semibold">Honors:</span>{" "}
             <span className="text-foreground/90">
-              Dean’s List, Academic Excellence Scholarship, Texas Competitive Scholarship
+              Academic Excellence Scholarship, Texas Competitive Scholarship, Dean’s List, Edexcel High Achievers’ Award, The Daily Star Award
             </span>
           </p>
 
