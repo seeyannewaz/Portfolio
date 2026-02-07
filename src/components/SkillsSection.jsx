@@ -11,6 +11,7 @@ const skills = [
   { name: "Next.js", category: "frontend" },
   { name: "Tailwind CSS", category: "frontend" },
   { name: "Framer Motion", category: "frontend" },
+  { name: "Angular", category: "frontend" },
 
   // Backend
   { name: "C", category: "backend" },
@@ -30,6 +31,7 @@ const skills = [
   { name: "Dart", category: "backend" },
   { name: "Lisp", category: "backend" },
   { name: "VHDL", category: "backend" },
+  { name: "Spring Boot", category: "backend" },
 
   // Tools
   { name: "Git", category: "tools" },
