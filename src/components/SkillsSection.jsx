@@ -50,9 +50,7 @@ const skills = [
   { name: "Hugging Face", category: "tools" },
   { name: "JIRA", category: "tools" },
   { name: "Postman", category: "tools" },
-  { name: "Excel", category: "tools" },
-  { name: "PowerPoint", category: "tools" },
-  { name: "Word", category: "tools" },
+  { name: "MS Office", category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
