@@ -35,8 +35,6 @@ const skills = [
 
   // Tools
   { name: "Git", category: "tools" },
-  { name: "GitHub", category: "tools" },
-  { name: "GitLab", category: "tools" },
   { name: "Linux", category: "tools" },
   { name: "Docker", category: "tools" },
   { name: "Kubernetes", category: "tools" },
