@@ -29,7 +29,7 @@ const projects = [
     id: 2,
     title: "InboxIntel",
     description:
-      "An AI-powered email triage system that connects to Gmail, summarizes unread messages, classifies priority and category, extracts tasks, and generates reply drafts.",
+      "An AI-powered inbox assistant that connects to Gmail, summarizes unread messages, classifies priority and category, extracts tasks, and generates reply drafts.",
     image: inboxIntelImg,
     tags: [
       "Python",
