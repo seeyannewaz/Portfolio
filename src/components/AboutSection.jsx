@@ -80,7 +80,7 @@ export const AboutSection = () => {
                 aria-label="Portrait of Seeyan Newaz"
               >
                 {/* 3D frame behind */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/80 via-secondary/80 to-primary/60 shadow-2xl translate-x-5 translate-y-5"></div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/80 via-secondary/80 to-primary/60 shadow-2xl translate-x-4 translate-y-4"></div>
 
                 {/* Image */}
                 <img

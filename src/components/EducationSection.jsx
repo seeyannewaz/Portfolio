@@ -35,7 +35,7 @@ export const EducationSection = () => {
           {/* Top row: School + location | Dates */}
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 mb-2">
             <h3 className="text-lg md:text-xl font-extrabold">
-              The University of Texas at Dallas, Richardson, TX
+              The University of Texas at Dallas (Richardson, TX)
             </h3>
             <p className="text-sm font-semibold text-primary mt-1">
               Aug 2022 – May 2026
