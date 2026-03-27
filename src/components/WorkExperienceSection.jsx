@@ -19,7 +19,7 @@ const EXPERIENCES = [
     period: "May 2025 – Aug 2025",
     tech: "ASP.NET Core, C#, React, TypeScript, Apache OpenNLP, PdfPig",
     points: [
-      "Built a full-stack PDF data-extraction pipeline for new-client onboarding with potential savings of $1M+.",
+      "Built a full-stack PDF data-extraction pipeline for new-client onboarding with potential savings of $100K+.",
       "Designed an interactive annotations tool and intelligent table detection to save up to 5 days per client.",
       "Engineered and trained custom NLP models (NER) to extract structured data entities.",
       "Architected backend extraction to infer relationships and auto-classify data.",
