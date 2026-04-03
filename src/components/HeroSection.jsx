@@ -99,7 +99,7 @@ export const HeroSection = () => {
             I&apos;m a software developer passionate about problem-solving, innovation, and
             building impactful solutions through full-stack development, machine learning,
             artificial intelligence and data analysis. I&apos;m always eager for
-            opportunities—whether internships, collaborations, or employment—that challenge me
+            opportunities- whether internships, collaborations, or employment- that challenge me
             and help me grow as a software developer.
           </p>
 
