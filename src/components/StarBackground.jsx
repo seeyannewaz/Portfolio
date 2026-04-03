@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 
-// id, size, x, y, opacity, animationDuration
-// id, size, x, y, delay, animationDuration
-
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
+  const [parallax, setParallax] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     generateStars();
@@ -18,6 +16,22 @@ export const StarBackground = () => {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    if (reduce) return;
+
+    const onMove = (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 28;
+      const y = (e.clientY / window.innerHeight - 0.5) * 28;
+      setParallax({ x, y });
+    };
+
+    window.addEventListener("mousemove", onMove, { passive: true });
+    return () => window.removeEventListener("mousemove", onMove);
   }, []);
 
   const generateStars = () => {
@@ -61,35 +75,42 @@ export const StarBackground = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {stars.map((star) => (
-        <div
-          key={star.id}
-          className="star animate-pulse-subtle"
-          style={{
-            width: star.size + "px",
-            height: star.size + "px",
-            left: star.x + "%",
-            top: star.y + "%",
-            opacity: star.opacity,
-            animationDuration: star.animationDuration + "s",
-          }}
-        />
-      ))}
+      <div
+        className="absolute inset-0 motion-safe:transition-transform motion-safe:duration-[1.4s] motion-safe:ease-out"
+        style={{
+          transform: `translate3d(${parallax.x}px, ${parallax.y}px, 0)`,
+        }}
+      >
+        {stars.map((star) => (
+          <div
+            key={star.id}
+            className="star animate-pulse-subtle"
+            style={{
+              width: star.size + "px",
+              height: star.size + "px",
+              left: star.x + "%",
+              top: star.y + "%",
+              opacity: star.opacity,
+              animationDuration: star.animationDuration + "s",
+            }}
+          />
+        ))}
 
-      {meteors.map((meteor) => (
-        <div
-          key={meteor.id}
-          className="meteor animate-meteor"
-          style={{
-            width: meteor.size * 50 + "px",
-            height: meteor.size * 2 + "px",
-            left: meteor.x + "%",
-            top: meteor.y + "%",
-            animationDelay: meteor.delay,
-            animationDuration: meteor.animationDuration + "s",
-          }}
-        />
-      ))}
+        {meteors.map((meteor) => (
+          <div
+            key={meteor.id}
+            className="meteor animate-meteor"
+            style={{
+              width: meteor.size * 50 + "px",
+              height: meteor.size * 2 + "px",
+              left: meteor.x + "%",
+              top: meteor.y + "%",
+              animationDelay: meteor.delay,
+              animationDuration: meteor.animationDuration + "s",
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 };

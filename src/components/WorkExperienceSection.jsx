@@ -1,6 +1,7 @@
 // src/components/WorkExperienceSection.jsx
-import { Briefcase } from "lucide-react";
+import { SectionHeading } from "@/components/SectionHeading";
 import { cn } from "@/lib/utils";
+import { Briefcase } from "lucide-react";
 
 const EXPERIENCES = [
   {
@@ -78,21 +79,19 @@ function highlightMetrics(text) {
 
 export const WorkExperienceSection = () => {
   return (
-    <section id="experience" className="py-24 px-4 relative bg-secondary/30">
+    <section id="experience" className="py-24 px-4 relative bg-secondary/25 border-y border-border/50">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-14 text-center">
+        <SectionHeading eyebrow="// chronology">
           Work <span className="text-primary">Experience</span>
-        </h2>
-        <div className="flex justify-center mb-14">
-          <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
-            <Briefcase className="h-6 w-6" />
+        </SectionHeading>
+        <div className="flex justify-center mb-10">
+          <div className="flex items-center justify-center h-14 w-14 rounded-2xl bg-primary/10 text-primary border border-primary/25 shadow-[0_0_28px_hsl(var(--primary)/0.15)]">
+            <Briefcase className="h-7 w-7" />
           </div>
         </div>
 
-        {/* Timeline wrapper */}
         <div className="relative">
-          {/* Center line (desktop) */}
-          <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 h-full w-px bg-border" />
+          <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 h-full w-px bg-gradient-to-b from-primary/70 via-border to-accent/70" />
 
           <ol className="space-y-10">
             {EXPERIENCES.map((exp, idx) => {
@@ -103,7 +102,7 @@ export const WorkExperienceSection = () => {
                   <span
                     className={cn(
                       "hidden md:flex absolute top-3 left-1/2 -translate-x-1/2 h-4 w-4 rounded-full ring-4 ring-background",
-                      "bg-primary shadow-md"
+                      "bg-primary shadow-[0_0_16px_hsl(var(--primary)/0.55)]"
                     )}
                     aria-hidden="true"
                   />
@@ -124,9 +123,8 @@ export const WorkExperienceSection = () => {
                     {/* Card */}
                     <article
                       className={cn(
-                        "relative bg-card rounded-xl shadow-xs p-6 border border-border card-hover",
+                        "relative glass-card rounded-xl p-6 border border-border/80 card-hover noise-overlay",
                         "md:max-w-[560px]",
-                        // offset from center line a bit for breathing space
                         isLeft ? "md:ml-auto" : "md:mr-auto"
                       )}
                     >

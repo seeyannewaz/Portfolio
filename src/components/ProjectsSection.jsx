@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/SectionHeading";
 import { ArrowRight, Github } from "lucide-react";
 import hydrawatchImg from "../assets/hydrawatch.webp";
 import listernshipsImg from "../assets/Listernships.png";
@@ -131,56 +132,61 @@ export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <SectionHeading eyebrow="// shipped" className="mb-6">
           Featured <span className="text-primary">Projects</span>
-        </h2>
+        </SectionHeading>
 
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
           Here are some of my recent projects. Each project was carefully
           crafted with attention to detail, performance, and user experience.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
-            <div
+            <article
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="interactive-panel group rounded-xl overflow-hidden card-hover noise-overlay border border-border/70"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden scanlines-subtle">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </div>
 
-              <div className="p-6">
+              <div className="p-6 text-left">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                      className="font-mono text-[10px] uppercase tracking-wide px-2.5 py-1 border rounded-md bg-secondary/80 text-secondary-foreground border-border/80 group-hover:border-primary/30 transition-colors"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                <h3 className="text-xl font-semibold mb-1 group-hover:text-primary transition-colors duration-300">
+                  {project.title}
+                </h3>
+                <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex justify-start items-center">
                   <a
                     href={project.githubUrl}
                     target="_blank"
-                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/60 text-foreground/85 hover:text-primary hover:border-primary/55 hover:shadow-[0_0_22px_hsl(var(--primary)/0.25)] transition-all duration-300"
+                    aria-label={`${project.title} on GitHub`}
                   >
                     <Github size={20} />
                   </a>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 

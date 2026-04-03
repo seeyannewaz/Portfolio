@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
 
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
 
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
@@ -31,6 +37,42 @@
   --animate-blob: blob 14s ease-in-out infinite;
   --animate-shine: shine 2.2s linear infinite;
   --animate-tilt: tilt 10s ease-in-out infinite;
+  --animate-caret-blink: caret-blink 1s step-end infinite;
+  --animate-border-flow: border-flow 5s linear infinite;
+  --animate-grid-pan: grid-pan 22s linear infinite;
+
+  @keyframes caret-blink {
+
+    0%,
+    50% {
+      opacity: 1;
+    }
+
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes border-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+
+  @keyframes grid-pan {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    100% {
+      transform: translate(42px, 42px);
+    }
+  }
 
   @keyframes float {
 
@@ -155,43 +197,49 @@
 
 @layer base {
   :root {
-    --background: 232 45% 98%;
-    --foreground: 228 32% 12%;
+    --background: 230 40% 97%;
+    --foreground: 230 35% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 228 32% 12%;
+    --card-foreground: 230 35% 11%;
 
-    --primary: 212 100% 56%;
+    --primary: 195 100% 42%;
     --primary-foreground: 0 0% 100%;
 
-    --muted: 228 35% 95%;
-    --muted-foreground: 226 16% 42%;
+    --secondary: 228 32% 93%;
+    --secondary-foreground: 230 35% 11%;
 
-    --accent: 199 100% 50%;
-    --accent-foreground: 228 32% 12%;
+    --muted: 228 28% 94%;
+    --muted-foreground: 226 14% 38%;
 
-    --border: 228 28% 88%;
-    --ring: 212 100% 56%;
+    --accent: 280 85% 58%;
+    --accent-foreground: 230 35% 11%;
+
+    --border: 228 22% 86%;
+    --ring: 195 100% 42%;
   }
 
   .dark {
-    --background: 232 42% 7%;
-    --foreground: 220 25% 93%;
+    --background: 232 38% 6%;
+    --foreground: 210 40% 96%;
 
-    --card: 232 32% 10%;
-    --card-foreground: 220 25% 93%;
+    --card: 232 32% 9%;
+    --card-foreground: 210 40% 96%;
 
-    --primary: 210 100% 64%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 187 100% 52%;
+    --primary-foreground: 232 38% 6%;
 
-    --muted: 230 24% 15%;
-    --muted-foreground: 222 14% 70%;
+    --secondary: 230 22% 14%;
+    --secondary-foreground: 210 40% 96%;
 
-    --accent: 195 100% 58%;
-    --accent-foreground: 232 42% 7%;
+    --muted: 230 18% 13%;
+    --muted-foreground: 218 12% 68%;
 
-    --border: 228 22% 20%;
-    --ring: 210 100% 64%;
+    --accent: 285 90% 65%;
+    --accent-foreground: 232 38% 6%;
+
+    --border: 228 18% 18%;
+    --ring: 187 100% 52%;
   }
 
   * {
@@ -208,24 +256,24 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
     min-height: 100vh;
     background-image:
-      radial-gradient(circle at 15% 20%, hsl(var(--primary) / 0.16), transparent 26%),
-      radial-gradient(circle at 85% 15%, hsl(var(--accent) / 0.14), transparent 24%),
-      radial-gradient(circle at 50% 78%, hsl(280 90% 65% / 0.1), transparent 26%),
-      linear-gradient(135deg, hsl(var(--background)), hsl(230 42% 96%));
+      radial-gradient(ellipse 90% 60% at 10% -10%, hsl(var(--primary) / 0.22), transparent 50%),
+      radial-gradient(ellipse 70% 50% at 92% 8%, hsl(var(--accent) / 0.18), transparent 45%),
+      radial-gradient(circle at 50% 88%, hsl(285 85% 55% / 0.12), transparent 35%),
+      linear-gradient(160deg, hsl(var(--background)), hsl(230 35% 94%));
     background-attachment: fixed;
     overflow-x: hidden;
   }
 
   .dark body {
     background-image:
-      radial-gradient(circle at 18% 18%, hsl(var(--primary) / 0.2), transparent 24%),
-      radial-gradient(circle at 82% 16%, hsl(var(--accent) / 0.16), transparent 22%),
-      radial-gradient(circle at 50% 78%, hsl(280 100% 72% / 0.12), transparent 26%),
-      linear-gradient(135deg, hsl(var(--background)), hsl(230 38% 9%));
+      radial-gradient(ellipse 80% 55% at 12% -5%, hsl(var(--primary) / 0.25), transparent 48%),
+      radial-gradient(ellipse 65% 45% at 90% 6%, hsl(var(--accent) / 0.2), transparent 42%),
+      radial-gradient(circle at 48% 92%, hsl(285 90% 50% / 0.14), transparent 38%),
+      linear-gradient(160deg, hsl(var(--background)), hsl(232 36% 8%));
   }
 
   body::before {
@@ -233,13 +281,19 @@
     position: fixed;
     inset: 0;
     pointer-events: none;
-    opacity: 0.45;
+    opacity: 0.55;
     background-image:
-      linear-gradient(hsl(var(--border) / 0.18) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--border) / 0.18) 1px, transparent 1px);
-    background-size: 42px 42px;
-    mask-image: radial-gradient(circle at center, black 35%, transparent 95%);
+      linear-gradient(hsl(var(--border) / 0.35) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.35) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 85% 70% at 50% 40%, black 18%, transparent 72%);
     z-index: -1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body::before {
+      animation: none;
+    }
   }
 
   a,
@@ -539,6 +593,90 @@
       radial-gradient(circle at 40% 70%, white 0.7px, transparent 0.8px),
       radial-gradient(circle at 60% 50%, white 0.7px, transparent 0.8px);
     background-size: 18px 18px;
+  }
+}
+
+@utility tech-hero-grid {
+  background-image:
+    linear-gradient(hsl(var(--primary) / 0.11) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--primary) / 0.11) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 75% 65% at 50% 42%, black 20%, transparent 75%);
+}
+
+@utility hero-glow-orb {
+  background: radial-gradient(circle, hsl(var(--primary) / 0.35) 0%, transparent 68%);
+  filter: blur(48px);
+  animation: blob 18s ease-in-out infinite;
+}
+
+@utility nav-link-glow {
+  position: relative;
+}
+
+@utility nav-link-glow {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after,
+  &.nav-active::after {
+    width: 100%;
+  }
+}
+
+@utility tech-pill {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border) / 0.9);
+  background: hsl(var(--card) / 0.55);
+  backdrop-filter: blur(10px);
+  color: hsl(var(--foreground) / 0.92);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+@utility tech-pill {
+  &:hover {
+    transform: translateY(-2px);
+    border-color: hsl(var(--primary) / 0.45);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.15);
+  }
+}
+
+@utility scanlines-subtle {
+  position: relative;
+}
+
+@utility scanlines-subtle {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(var(--foreground) / 0.02) 2px,
+      hsl(var(--foreground) / 0.02) 3px
+    );
+    opacity: 0.5;
+    mix-blend-mode: overlay;
   }
 }
 

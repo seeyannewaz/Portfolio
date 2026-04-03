@@ -1,4 +1,5 @@
 // src/components/EducationSection.jsx
+import { SectionHeading } from "@/components/SectionHeading";
 import { GraduationCap } from "lucide-react";
 
 const COURSEWORK = [
@@ -20,18 +21,16 @@ export const EducationSection = () => {
     <section id="education" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
 
-        {/* Title with icon */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-14 text-center">
+        <SectionHeading eyebrow="// academics">
           My <span className="text-primary">Education</span>
-        </h2>
-        <div className="flex justify-center mb-14">
-          <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
-            <GraduationCap className="h-6 w-6" />
+        </SectionHeading>
+        <div className="flex justify-center mb-10">
+          <div className="flex items-center justify-center h-14 w-14 rounded-2xl bg-primary/10 text-primary border border-primary/25 shadow-[0_0_28px_hsl(var(--primary)/0.15)]">
+            <GraduationCap className="h-7 w-7" />
           </div>
         </div>
 
-        {/* Card */}
-        <div className="bg-card border border-border rounded-2xl shadow-xs p-6 md:p-8 card-hover text-left">
+        <div className="glass-card rounded-2xl p-6 md:p-8 card-hover text-left noise-overlay">
           {/* Top row: School + location | Dates */}
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 mb-2">
             <h3 className="text-lg md:text-xl font-extrabold">
