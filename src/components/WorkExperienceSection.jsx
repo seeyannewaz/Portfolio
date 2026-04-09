@@ -2,6 +2,7 @@
 import { SectionHeading } from "@/components/SectionHeading";
 import { cn } from "@/lib/utils";
 import { Briefcase } from "lucide-react";
+import { useState } from "react";
 
 const EXPERIENCES = [
   {
@@ -78,6 +79,11 @@ function highlightMetrics(text) {
 }
 
 export const WorkExperienceSection = () => {
+  const [showAllExperiences, setShowAllExperiences] = useState(false);
+  const visibleExperiences = showAllExperiences
+    ? EXPERIENCES
+    : EXPERIENCES.slice(0, 3);
+
   return (
     <section id="experience" className="py-24 px-4 relative bg-secondary/25 border-y border-border/50">
       <div className="container mx-auto max-w-5xl">
@@ -94,7 +100,7 @@ export const WorkExperienceSection = () => {
           <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 h-full w-px bg-gradient-to-b from-primary/70 via-border to-accent/70" />
 
           <ol className="space-y-10">
-            {EXPERIENCES.map((exp, idx) => {
+            {visibleExperiences.map((exp, idx) => {
               const isLeft = idx % 2 === 0; // alternate sides on desktop
               return (
                 <li key={idx} className="relative">
@@ -161,6 +167,19 @@ export const WorkExperienceSection = () => {
             })}
           </ol>
         </div>
+        {EXPERIENCES.length > 3 && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-lg border border-primary/40 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/20"
+              onClick={() => setShowAllExperiences((prev) => !prev)}
+            >
+              {showAllExperiences
+                ? "Show Less Experiences"
+                : "View More Experiences"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

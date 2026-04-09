@@ -123,14 +123,14 @@ export const HeroSection = () => {
               Initialize contact
             </a>
           </div>
-        </div>
-      </div>
 
-      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce motion-reduce:animate-none z-10">
-        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-2">
-          Scroll
-        </span>
-        <ArrowDown className="h-5 w-5 text-primary drop-shadow-[0_0_12px_hsl(var(--primary)/0.5)]" />
+          <div className="mt-10 flex flex-col items-center animate-bounce motion-reduce:animate-none">
+            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-2">
+              Scroll
+            </span>
+            <ArrowDown className="h-5 w-5 text-primary drop-shadow-[0_0_12px_hsl(var(--primary)/0.5)]" />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/components/SectionHeading";
 import { ArrowRight, Github } from "lucide-react";
+import { useState } from "react";
 import hydrawatchImg from "../assets/hydrawatch.webp";
 import listernshipsImg from "../assets/Listernships.png";
 import weatherwiseImg from "../assets/weatherwise.jpg";
@@ -178,6 +179,9 @@ const projects = [
 ];
 
 export const ProjectsSection = () => {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const visibleProjects = showAllProjects ? projects : projects.slice(0, 9);
+
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
@@ -191,7 +195,7 @@ export const ProjectsSection = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {visibleProjects.map((project, key) => (
             <article
               key={key}
               className="interactive-panel group rounded-xl overflow-hidden card-hover noise-overlay border border-border/70"
@@ -238,6 +242,18 @@ export const ProjectsSection = () => {
             </article>
           ))}
         </div>
+
+        {projects.length > 9 && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-lg border border-primary/40 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/20"
+              onClick={() => setShowAllProjects((prev) => !prev)}
+            >
+              {showAllProjects ? "Show Less Projects" : "View More Projects"}
+            </button>
+          </div>
+        )}
 
         <div className="text-center mt-12">
           <a
