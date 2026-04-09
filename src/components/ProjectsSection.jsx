@@ -7,9 +7,12 @@ import experteventsImg from "../assets/Expert.webp";
 import satelliteImg from "../assets/satellite.png";
 import fastfoodImg from "../assets/fastfood.png";
 import resumecritiquerImg from "../assets/airesumecritiquer.png";
-import inboxIntelImg from "../assets/InboxIntel.png"
-import receiptBuddyImg from "../assets/ReceiptBuddy.png"
-import TraceImg from "../assets/Trace.png"
+import inboxIntelImg from "../assets/InboxIntel.png";
+import receiptBuddyImg from "../assets/ReceiptBuddy.png";
+import TraceImg from "../assets/Trace.png";
+import SAndCImg from "../assets/database-server.png";
+import TreeImg from "../assets/tree(1).png";
+import ShellImg from "../assets/shell.png";
 
 const projects = [
   {
@@ -113,22 +116,49 @@ const projects = [
     id: 7,
     title: "WeatherWise",
     description:
-      "Responsive app built with HTML, CSS, and JavaScript, integrating the OpenWeatherMap API for real-time forecasts with a light/dark mode toggle and smooth UI transitions.",
+    "Responsive app built with HTML, CSS, and JavaScript, integrating the OpenWeatherMap API for real-time forecasts with a light/dark mode toggle and smooth UI transitions.",
     image: weatherwiseImg,
     tags: ["JavaScript", "HTML/CSS", "REST API", "OpenWeatherMap API"],
     githubUrl: "https://github.com/seeyannewaz/WeatherWise",
   },
   {
     id: 8,
+    title: "Multi-threaded Database Server & Client",
+    description:
+    "Multithreaded TCP database server and CLI client in C with pthread-based per-connection workers, a file-backed PUT/GET protocol for append and ID lookup, and improved fault tolerance through isolated thread resources and strong error handling.",
+    image: SAndCImg,
+    tags: ["C", "Pthreads", "POSIX Sockets"],
+    githubUrl: "https://github.com/seeyannewaz/Multi-threaded-Database-Server-and-Client.git",
+  },
+  {
+    id: 9,
     title: "ExpertEvents",
     description:
-      "Full-stack app linking 50+ university student organizations with 30k+ students, featuring an AI chatbot (GPT-4 Turbo) for personalized event recommendations and a real-time Firestore calendar.",
+    "Full-stack app linking 50+ university student organizations with 30k+ students, featuring an AI chatbot (GPT-4 Turbo) for personalized event recommendations and a real-time Firestore calendar.",
     image: experteventsImg,
     tags: ["Dart", "Flutter", "Firebase", "Firestore", "GPT-4 Turbo"],
     githubUrl: "https://github.com/acm-projects/ExpertEvents",
   },
   {
-    id: 9,
+    id: 10,
+    title: "Multi-threaded Hash Tree",
+    description:
+      "Multithreaded file fingerprinting tool in C using Jenkins hashing across 4 KB blocks and a binary-thread reduction tree via pthreads to compute deterministic root hashes, benchmarked from 1 to 256 threads.",
+    image: TreeImg,
+    tags: ["C", "Linux", "Pthreads"],
+    githubUrl: "https://github.com/seeyannewaz/Multi-threaded-Hash-Tree.git",
+  },
+  {
+    id: 11,
+    title: "Simple Shell",
+    description:
+      "Unix-style shell in C with built-in exit/cd/history commands, rolling 100-command replay/reset support, and multi-stage pipelines using pipe() and dup2(), with robust validation and error handling for stability.",
+    image: ShellImg,
+    tags: ["C", "Linux"],
+    githubUrl: "https://github.com/seeyannewaz/Simple-Shell.git",
+  },
+  {
+    id: 12,
     title: "Satellite",
     description:
       "C++ program simulating telemetry data collection, storage, and transmission in an embedded satellite system, optimized with OOP, file I/O, and circular arrays for high efficiency and accuracy.",
@@ -137,7 +167,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/Satellite",
   },
   {
-    id: 10,
+    id: 13,
     title: "Fast-Food Chain Analytics",
     description:
       "C++ program for tracking transactions and inventory of a fast-food chain, featuring OOP design, file I/O with CSVs, business analytics, and robust input validation for efficient, accurate operations.",

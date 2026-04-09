@@ -13,6 +13,8 @@ const skills = [
   { name: "Tailwind CSS", category: "frontend" },
   { name: "Framer Motion", category: "frontend" },
   { name: "Angular", category: "frontend" },
+  { name: "D3.js", category: "frontend" },
+  { name: "Chart.js", category: "frontend" },
 
   // Backend
   { name: "C", category: "backend" },
@@ -33,6 +35,10 @@ const skills = [
   { name: "Lisp", category: "backend" },
   { name: "VHDL", category: "backend" },
   { name: "Spring Boot", category: "backend" },
+  { name: "Pandas", category: "backend" },
+  { name: "NumPy", category: "backend" },
+  { name: "scikit-learn", category: "backend" },
+  { name: "Matplotlib", category: "backend" },
 
   // Tools
   { name: "Git", category: "tools" },
