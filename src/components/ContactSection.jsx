@@ -26,7 +26,7 @@ export const ContactSection = () => {
             Contact channels
           </h3>
 
-          <div className="grid w-full max-w-2xl gap-5 sm:grid-cols-1 md:grid-cols-3">
+          <div className="grid w-full max-w-2xl gap-5 sm:grid-cols-1 md:grid-cols-2">
             <div className="glass-card rounded-2xl p-6 text-center noise-overlay card-hover border border-border/70">
               <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20">
                 <Mail className="h-6 w-6" />
@@ -35,13 +35,13 @@ export const ContactSection = () => {
               <span className="text-muted-foreground text-sm break-all">seeyannewaz@gmail.com</span>
             </div>
 
-            <div className="glass-card rounded-2xl p-6 text-center noise-overlay card-hover border border-border/70">
+            {/* <div className="glass-card rounded-2xl p-6 text-center noise-overlay card-hover border border-border/70">
               <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20">
                 <Phone className="h-6 w-6" />
               </div>
               <h4 className="font-semibold text-sm mb-1">Phone</h4>
-              <span className="text-muted-foreground text-sm">+1 (945) 400-7069</span>
-            </div>
+              <span className="text-muted-foreground text-sm">+# (###) ###-####</span>
+            </div> */}
 
             <div className="glass-card rounded-2xl p-6 text-center noise-overlay card-hover border border-border/70 md:col-span-1">
               <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20">

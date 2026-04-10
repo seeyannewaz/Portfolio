@@ -1,6 +1,7 @@
 // src/components/EducationSection.jsx
 import { SectionHeading } from "@/components/SectionHeading";
 import { GraduationCap } from "lucide-react";
+import utdLogo from "@/assets/UTD-logo.png";
 
 const COURSEWORK = [
   "Computer Architecture (MIPS)",
@@ -33,8 +34,14 @@ export const EducationSection = () => {
         <div className="glass-card rounded-2xl p-6 md:p-8 card-hover text-left noise-overlay">
           {/* Top row: School + location | Dates */}
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 mb-2">
-            <h3 className="text-lg md:text-xl font-extrabold">
-              The University of Texas at Dallas (Richardson, TX)
+            <h3 className="text-lg md:text-xl font-extrabold flex items-center gap-3">
+              <img
+                src={utdLogo}
+                alt="University of Texas at Dallas logo"
+                className="h-15 w-15 rounded-md object-contain shrink-0"
+                loading="lazy"
+              />
+              <span>The University of Texas at Dallas (Richardson, TX)</span>
             </h3>
             <p className="text-sm font-semibold text-primary mt-1">
               Aug 2022 – May 2026

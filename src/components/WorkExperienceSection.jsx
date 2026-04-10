@@ -7,7 +7,7 @@ import { useState } from "react";
 const EXPERIENCES = [
   {
     role: "Peer Tutor for Calculus and Linear Algebra",
-    company: "Student Success Center, The University of Texas at Dallas",
+    company: "Student Success Center - The University of Texas at Dallas",
     period: "Aug 2023 – Present",
     points: [
       "Helping students understand complex Calculus and Linear Algebra concepts via one-on-one tutoring; achieved a 100% satisfaction rate.",
@@ -30,7 +30,7 @@ const EXPERIENCES = [
   },
   {
     role: "Backend Software Developer",
-    company: "Association for Computing Machinery, The University of Texas at Dallas Chapter",
+    company: "Association for Computing Machinery - The University of Texas at Dallas Chapter",
     period: "Feb 2024 – Apr 2024",
     tech: "Dart, Flutter, Firebase, Cloud Firestore, OpenAI API, GPT-4 Turbo",
     points: [
