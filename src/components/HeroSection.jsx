@@ -39,7 +39,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden"
+      className="relative min-h-[100svh] md:min-h-screen flex flex-col items-center justify-start md:justify-center px-4 pt-28 sm:pt-32 md:pt-24 overflow-hidden"
     >
       <div
         className="tech-hero-grid absolute inset-0 motion-safe:animate-grid-pan pointer-events-none opacity-80"
