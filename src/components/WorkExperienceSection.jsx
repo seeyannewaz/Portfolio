@@ -42,7 +42,7 @@ const EXPERIENCES = [
   },
   {
     role: "Backend Software Developer",
-    company: "Association for Computing Machinery - The University of Texas at Dallas Chapter",
+    company: "Association for Computing Machinery - The University of Texas at Dallas",
     period: "Feb 2024 – Apr 2024",
     tech: "Dart, Flutter, Firebase, Cloud Firestore, OpenAI API, GPT-4 Turbo",
     points: [
