@@ -12,9 +12,9 @@ const EXPERIENCES = [
     tech: "Python, MNE, SciPy, pandas, scikit-learn",
     points: [
       "Built a reproducible Python EEG classification pipeline for Alzheimer's detection using MNE, SciPy, pandas, and scikit-learn.",
-      "Implemented Welch PSD feature extraction across 19 EEG channels, deriving Delta, Theta, Alpha, Beta, and ratio-based biomarkers.",
+      "Implemented Welch PSD feature extraction across 19 EEG channels, deriving Delta, Theta, Alpha, Beta, & ratio-based biomarkers for downstream classifiers.",
       "Engineered posterior-channel, log-transformed, and derivatives-based features, improving Random Forest accuracy to 80.0% and ROC-AUC to 0.861.",
-      "Validated Logistic Regression and Random Forest with subject-level stratified 5-fold cross-validation to prevent data leakage.",
+      "Validated Logistic Regression & Random Forest with subject-level 5-fold CV, preventing data leakage & improving reliability of participant-level evaluation.",
     ],
   },
   {
