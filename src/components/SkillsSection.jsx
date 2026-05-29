@@ -39,6 +39,8 @@ const skills = [
   { name: "NumPy", category: "backend" },
   { name: "scikit-learn", category: "backend" },
   { name: "Matplotlib", category: "backend" },
+  { name: "SciPy", category: "backend" },
+  { name: "MNE", category: "backend" },
 
   // Tools
   { name: "Git", category: "tools" },
