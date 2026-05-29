@@ -8,7 +8,7 @@ const EXPERIENCES = [
   {
     role: "Peer Tutor for Calculus and Linear Algebra",
     company: "Student Success Center - The University of Texas at Dallas",
-    period: "Aug 2023 – Present",
+    period: "Aug 2023 – May 2026",
     points: [
       "Helping students understand complex Calculus and Linear Algebra concepts via one-on-one tutoring; achieved a 100% satisfaction rate.",
       "Adapting strategies to learner styles, contributing to grade increases for 60% of students.",
