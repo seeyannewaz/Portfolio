@@ -15,6 +15,7 @@ const COURSEWORK = [
   "Computer Networks",
   "Digital Logic and Computer Design",
   "Linear Algebra",
+  "Automata Theory"
 ];
 
 export const EducationSection = () => {
@@ -58,7 +59,7 @@ export const EducationSection = () => {
           {/* Degree + GPA */}
           <p className="text-sm md:text-base text-foreground/90 mb-3">
             <span className="font-semibold">B.S. in Computer Science</span>{" "}
-            <span className="text-foreground/70">(GPA: 3.91)</span>
+            <span className="text-foreground/70">(GPA: 3.92)</span>
           </p>
 
           {/* Honors */}
