@@ -7,7 +7,7 @@ import { useState } from "react";
 const EXPERIENCES = [
   {
     role: "Machine Learning Engineer",
-    company: "The University of Texas at Dallas, Richardson, TX",
+    company: "The University of Texas at Dallas",
     period: "Jan 2026 – May 2026",
     tech: "Python, MNE, SciPy, pandas, scikit-learn",
     points: [
