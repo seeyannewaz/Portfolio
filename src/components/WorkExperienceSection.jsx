@@ -6,6 +6,18 @@ import { useState } from "react";
 
 const EXPERIENCES = [
   {
+    role: "Machine Learning Engineer",
+    company: "The University of Texas at Dallas, Richardson, TX",
+    period: "Jan 2026 – May 2026",
+    tech: "Python, MNE, SciPy, pandas, scikit-learn",
+    points: [
+      "Built a reproducible Python EEG classification pipeline for Alzheimer's detection using MNE, SciPy, pandas, and scikit-learn.",
+      "Implemented Welch PSD feature extraction across 19 EEG channels, deriving Delta, Theta, Alpha, Beta, and ratio-based biomarkers.",
+      "Engineered posterior-channel, log-transformed, and derivatives-based features, improving Random Forest accuracy to 80.0% and ROC-AUC to 0.861.",
+      "Validated Logistic Regression and Random Forest with subject-level stratified 5-fold cross-validation to prevent data leakage.",
+    ],
+  },
+  {
     role: "Peer Tutor for Calculus and Linear Algebra",
     company: "Student Success Center - The University of Texas at Dallas",
     period: "Aug 2023 – May 2026",
