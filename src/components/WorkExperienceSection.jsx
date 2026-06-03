@@ -18,16 +18,6 @@ const EXPERIENCES = [
     ],
   },
   {
-    role: "Peer Tutor for Calculus and Linear Algebra",
-    company: "Student Success Center - The University of Texas at Dallas",
-    period: "Aug 2023 – May 2026",
-    points: [
-      "Helping students understand complex Calculus and Linear Algebra concepts via one-on-one tutoring; achieved a 100% satisfaction rate.",
-      "Adapting strategies to learner styles, contributing to grade increases for 60% of students.",
-      "Fostering a growth-mindset environment and boosting student confidence in Calculus and Linear Algebra."
-    ],
-  },
-  {
     role: "Software Developer Intern",
     company: "Paycom, USA",
     period: "May 2025 – Aug 2025",
@@ -50,6 +40,16 @@ const EXPERIENCES = [
       "Trained and integrated an AI chatbot using OpenAI's GPT-4 Turbo for personalized event recommendations with 90% accuracy.",
       "Designed a dynamic calendar with Firestore and integrated date formatting for real-time event management, boosting functionality and achieving 93% user satisfaction.",
       "Optimized Firestore database schema for 50% faster data retrieval than default SQL database, and seamless real-time synchronization, ensuring data integrity and efficient storage.",
+    ],
+  },
+  {
+    role: "Peer Tutor for Calculus and Linear Algebra",
+    company: "Student Success Center - The University of Texas at Dallas",
+    period: "Aug 2023 – May 2026",
+    points: [
+      "Helping students understand complex Calculus and Linear Algebra concepts via one-on-one tutoring; achieved a 100% satisfaction rate.",
+      "Adapting strategies to learner styles, contributing to grade increases for 60% of students.",
+      "Fostering a growth-mindset environment and boosting student confidence in Calculus and Linear Algebra."
     ],
   },
   {
