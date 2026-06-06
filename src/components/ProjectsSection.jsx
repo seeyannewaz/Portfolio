@@ -11,13 +11,30 @@ import resumecritiquerImg from "../assets/airesumecritiquer.png";
 import inboxIntelImg from "../assets/InboxIntel.png";
 import receiptBuddyImg from "../assets/ReceiptBuddy.png";
 import TraceImg from "../assets/Trace.png";
+import flowForgeImg from "../assets/FlowForge.png";
 import SAndCImg from "../assets/database-server.png";
 import TreeImg from "../assets/tree(1).png";
 import ShellImg from "../assets/shell.png";
 
 const projects = [
   {
-  id: 1,
+    id: 1,
+    title: "FlowForge",
+    description:
+      "A distributed, fault-tolerant job engine for durable async execution, featuring retry scheduling with exponential backoff, attempt-level audit logs, post-commit publishing to eliminate Redis/PostgreSQL consistency races, and production-grade observability with worker heartbeats, stale-job recovery, and Prometheus metrics.",
+    image: flowForgeImg,
+    tags: [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Redis Streams",
+      "Docker",
+      "Micrometer",
+    ],
+    githubUrl: "https://github.com/seeyannewaz/FlowForge.git",
+  },
+  {
+  id: 2,
   title: "Trace",
   description:
     "A sentiment-driven stock prediction platform that analyzes post-earnings direction using market data, multi-source financial text, and cross-company AI spillover signals, with an interactive dashboard for model comparison, contagion mapping, and event-level case studies.",
@@ -35,7 +52,7 @@ const projects = [
   githubUrl: "https://github.com/seeyannewaz/FinHack26.git",
 },
   {
-    id: 2,
+    id: 3,
     title: "ReceiptBuddy",
     description:
       "An AI-powered, Docker-containerized web app that enables users to upload receipt images and get all-time/monthly insights, real-time data visualization and spending trends.",
@@ -50,7 +67,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/Receipt-Buddy.git",
   },
   {
-    id: 3,
+    id: 4,
     title: "InboxIntel",
     description:
       "An AI-powered inbox assistant that connects to Gmail, summarizes unread messages, classifies priority and category, extracts tasks, and generates reply drafts.",
@@ -65,7 +82,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/InboxIntel.git",
   },
   {
-    id: 4,
+    id: 5,
     title: "AI Resume Critiquer",
     description:
       "Built an AI-powered resume critiquing web app that lets users upload PDF/TXT resumes and receive structured feedback tailored to specific job roles.",
@@ -80,7 +97,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/ai-resume-critiquer.git",
   },
   {
-    id: 5,
+    id: 6,
     title: "HydraWatch",
     description:
       "A Hydrate prediction web app at HackUTD for EOG Resources- a Flask + Next.js app with real-time dashboards, a 95%-accurate ML model, and scalable data handling for 100k+ IoT sensor points.",
@@ -97,7 +114,7 @@ const projects = [
     githubUrl: "https://github.com/Reevu01/Hydra-Watch",
   },
   {
-    id: 6,
+    id: 7,
     title: "Listernships",
     description:
       "Full-stack app to manage internship applications with CRUD features, real-time status updates, SQLite storage, and a responsive Chakra UI interface with dark mode.",
@@ -114,7 +131,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/Listernships",
   },
   {
-    id: 7,
+    id: 8,
     title: "WeatherWise",
     description:
     "Responsive app built with HTML, CSS, and JavaScript, integrating the OpenWeatherMap API for real-time forecasts with a light/dark mode toggle and smooth UI transitions.",
@@ -123,7 +140,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/WeatherWise",
   },
   {
-    id: 8,
+    id: 9,
     title: "Multi-threaded Database Server & Client",
     description:
     "Multithreaded TCP database server and CLI client in C with pthread-based per-connection workers, a file-backed PUT/GET protocol for append and ID lookup, and improved fault tolerance through isolated thread resources and strong error handling.",
@@ -132,7 +149,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/Multi-threaded-Database-Server-and-Client.git",
   },
   {
-    id: 9,
+    id: 10,
     title: "ExpertEvents",
     description:
     "Full-stack app linking 50+ university student organizations with 30k+ students, featuring an AI chatbot (GPT-4 Turbo) for personalized event recommendations and a real-time Firestore calendar.",
@@ -141,7 +158,7 @@ const projects = [
     githubUrl: "https://github.com/acm-projects/ExpertEvents",
   },
   {
-    id: 10,
+    id: 11,
     title: "Multi-threaded Hash Tree",
     description:
       "Multithreaded file fingerprinting tool in C using Jenkins hashing across 4 KB blocks and a binary-thread reduction tree via pthreads to compute deterministic root hashes, benchmarked from 1 to 256 threads.",
@@ -150,7 +167,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/Multi-threaded-Hash-Tree.git",
   },
   {
-    id: 11,
+    id: 12,
     title: "Simple Shell",
     description:
       "Unix-style shell in C with built-in exit/cd/history commands, rolling 100-command replay/reset support, and multi-stage pipelines using pipe() and dup2(), with robust validation and error handling for stability.",
@@ -159,7 +176,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/Simple-Shell.git",
   },
   {
-    id: 12,
+    id: 13,
     title: "Satellite",
     description:
       "C++ program simulating telemetry data collection, storage, and transmission in an embedded satellite system, optimized with OOP, file I/O, and circular arrays for high efficiency and accuracy.",
@@ -168,7 +185,7 @@ const projects = [
     githubUrl: "https://github.com/seeyannewaz/Satellite",
   },
   {
-    id: 13,
+    id: 14,
     title: "Fast-Food Chain Analytics",
     description:
       "C++ program for tracking transactions and inventory of a fast-food chain, featuring OOP design, file I/O with CSVs, business analytics, and robust input validation for efficient, accurate operations.",
